@@ -5,9 +5,7 @@ COPY librerias/module.xml /opt/jboss/wildfly/modules/system/layers/base/org/mari
 ADD aplicacion/Aplicacion.war /opt/jboss/wildfly/standalone/deployments/
 
 RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin#123 --silent
-
 EXPOSE 9990
-
 VOLUME /opt/jboss/wildfly/standalone/deployments/
 
 USER jboss
